@@ -1,0 +1,33 @@
+*****************************************************************************
+* Lista de Cláusulas
+*número;propriedade;conectivo;valor;tipo_clausula;tipo_valor;resposta;acao;
+*****************************************************************************
+1;casar;=;sim;of;s;You should marry !!!;0;
+2;casar;=;nao;of;s;You should not marry !!!;0;
+3;idade;=;compativel;oi;s;0;0;
+4;idade;=;incompativel;oi;s;0;0;
+5;economico;=;alto;no;s;0;0;
+6;economico;=;baixo;no;s;0;0;
+7;anos;<;30;no;n;0;0;
+8;anos;>;30;no;n;0;0;
+9;anos;=;30;no;n;0;0;
+10;casar;=;talvez;of;s;Think about getting married !!!;0;
+11;economico;=;medio;no;s;0;0;
+#
+*******************************************************************
+*Lista de Regras
+*numero;premissa;conclusão;
+*******************************************************************
+1;3;1;
+1;5;1;
+2;4;2;
+2;6;2;
+3;7;3;
+4;8;4;
+5;9;10;
+6;11;10;
+6;9;10;
+7;7;1;
+8;5;2;
+8;4;2;
+#

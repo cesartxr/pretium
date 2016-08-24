@@ -1,0 +1,90 @@
+<!--
+Copyright (C) 2016 Cesar Bezerra Teixeira - cesar.txr@outlook.com
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>
+-->
+
+<html>
+	<!-- Head -->
+	<head>
+	  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	  <meta http-equiv="Cache-Control" content="no-cache">
+	  <meta http-equiv="Pragma" content="no-cache">
+	  <meta http-equiv="Expires" content="0">
+	  <title>*** PRETIUM ***</title>
+	  <style>
+			body 
+			{
+				font-family: Calibri,Verdana;
+				font-size: 0.9em;
+				letter-spacing: 0.1em;
+				line-height: 1.3em;
+				margin: 50px 100px 50px 100px;
+				text-align: justify;	
+			}
+			button
+			{
+				width: 7em;
+				height: 3.0em;
+				text-decoration: none;
+				font-family: "Comic Sans MS";
+				font-size: 0.9em;
+				text-align: center;
+				padding: 3px;	
+			}
+		</style>
+		<script>
+			function iniciar()
+			{
+				document.f.poder.value = "";
+				document.f.anos.value  = "";
+			}
+			function validar()
+			{
+				if ((document.f.poder.value=="")||(document.f.anos.value==""))
+				{
+					alert ("It´s necessary to fill all fields !!!");
+					return false;
+				}
+				return true;
+			}
+		</script>
+		
+	</head>
+	
+	<!-- Corpo -->
+	
+	<body onload="iniciar()">
+		
+		<h1>Inference Example</h1>
+			
+		<form action="pretium.php" name="f" method="post" onSubmit="return validar()">
+		  <fieldset>
+			<input type="hidden" name="teste" value="1">
+		
+			<p><label>Tell your economic power:</label></p>
+			<input type="radio" name="poder" value="alto"/>High<br/>
+			<input type="radio" name="poder" value="medio"/>Medium<br/>
+			<input type="radio" name="poder" value="baixo"/>Low<br/>
+			
+			<p><label>Tell your age:</label></p>
+       		<input type="number" name="anos"/><br><br>
+       		
+			<button type="submit" name="abrir">Send</button>
+			
+		  </fieldset>
+		</form>
+		<p align="center"><a href="license.txt">License Terms</a></p>
+	</body>
+</html>
